@@ -1,0 +1,210 @@
+body {
+    /* Gaya tema terang */
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-theme {
+    /* Gaya tema gelap */
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+
+
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    position: relative;
+    animation: rotateColors 6s infinite linear;
+    
+}
+
+@keyframes rotateColors {
+    0% {
+        border-color: #ff7f50;
+    }
+
+    25% {
+        border-color: #f9c922;
+    }
+
+    50% {
+        border-color: #4fb0c6;
+    }
+
+    75% {
+        border-color: #8c5aa6;
+    }
+
+    100% {
+        border-color: #ff7f50;
+    }
+}
+
+
+
+
+#theme-toggle-button {
+    font-size: 17px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 7em;
+    cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked+svg #container {
+    fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked+svg #button {
+    transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+    opacity: 1;
+}
+
+#toggle:checked+svg #sun {
+    opacity: 0;
+}
+
+#moon {
+    opacity: 0;
+}
+
+#toggle:checked+svg #moon {
+    opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+    opacity: 1;
+}
+
+#toggle:checked+svg #cloud {
+    opacity: 0;
+}
+
+#stars {
+    opacity: 0;
+}
+
+#toggle:checked+svg #stars {
+    opacity: 1;
+}
+
+
+
+.textarea-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textarea-container button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+header {
+  color: #fff;
+  padding: 0px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+textarea {
+  width: 400px;
+  height: 150px;
+  resize: none;
+  margin-bottom: 10px;
+  padding: 5px;
+  
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #007bff;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+}
+
+select {
+  padding: 5px;
+}
+
+
+ select {
+     margin-bottom: 10px;
+     margin-top: 10px;
+     font-family: cursive, sans-serif;
+     outline: 0;
+     background: #4fb0c6;
+     color: #000000;
+     border: 1px solid black;
+     padding: 4px;
+     border-radius: 9px;
+ }
+
+
